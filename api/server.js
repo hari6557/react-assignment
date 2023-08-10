@@ -1,4 +1,4 @@
-import Hapi from 'hapi';
+import Hapi from '@hapi/hapi';
 
 const server = new Hapi.Server({
   host: '127.0.0.1',

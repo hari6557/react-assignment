@@ -29,13 +29,20 @@ const routes = [
 
       return shift;
     },
-    config: {
+    options: {
       validate: {
-        params: {
-          id: Joi.string().required(),
-        },
-      },
-    },
+          params: Joi.object({
+              name: Joi.string().required()
+          })
+      }
+    }
+    // config: {
+    //   validate: {
+    //     params: {
+    //       id: Joi.string().required(),
+    //     },
+    //   },
+    // },
   },
   {
     method: 'POST',
@@ -67,13 +74,20 @@ const routes = [
 
       return db.shifts.get(params.id);
     },
-    config: {
+    options: {
       validate: {
-        params: {
-          id: Joi.string().required(),
-        },
-      },
-    },
+          params: Joi.object({
+              name: Joi.string().required()
+          })
+      }
+    }
+    // config: {
+    //   validate: {
+    //     params: {
+    //       id: Joi.string().required(),
+    //     },
+    //   },
+    // },
   },
   {
     method: 'POST',
@@ -92,13 +106,20 @@ const routes = [
 
       return db.shifts.get(params.id);
     },
-    config: {
+    options: {
       validate: {
-        params: {
-          id: Joi.required(),
-        },
-      },
-    },
+          params: Joi.object({
+              name: Joi.string().required()
+          })
+      }
+    }
+    // config: {
+    //   validate: {
+    //     params: {
+    //       id: Joi.required(),
+    //     },
+    //   },
+    // },
   },
 ];
 
